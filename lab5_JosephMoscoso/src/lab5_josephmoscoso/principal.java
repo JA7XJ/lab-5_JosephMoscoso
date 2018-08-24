@@ -170,12 +170,12 @@ public class principal extends javax.swing.JFrame {
         tf_nombre7 = new javax.swing.JTextField();
         tf_user4 = new javax.swing.JTextField();
         jLabel50 = new javax.swing.JLabel();
-        tf_pass2 = new javax.swing.JPasswordField();
         jLabel51 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
         fecham3 = new javax.swing.JTextField();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
+        tf_pass2 = new javax.swing.JTextField();
         jd_modificarpelis = new javax.swing.JDialog();
         jButton17 = new javax.swing.JButton();
         jLabel55 = new javax.swing.JLabel();
@@ -624,7 +624,7 @@ public class principal extends javax.swing.JFrame {
         jScrollPane5.setViewportView(jt_peliculas);
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel44.setText("Aseo");
+        jLabel44.setText("Peliculas");
 
         javax.swing.GroupLayout jd_peliculasLayout = new javax.swing.GroupLayout(jd_peliculas.getContentPane());
         jd_peliculas.getContentPane().setLayout(jd_peliculasLayout);
@@ -1248,9 +1248,7 @@ public class principal extends javax.swing.JFrame {
 
         tf_user4.setEditable(false);
 
-        jLabel50.setText("Datos del empleado");
-
-        tf_pass2.setEditable(false);
+        jLabel50.setText("Datos de la pelicula");
 
         jLabel51.setText("Nombre");
 
@@ -1778,9 +1776,9 @@ public class principal extends javax.swing.JFrame {
 
     private void dul_visualizar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dul_visualizar1ActionPerformed
         // TODO add your handling code here:
-        tf_nombre3.setText(duc.getNombre());
-        fecham1.setText(duc.getSabor());
-        tf_user2.setText(duc.getCategoria());
+        tf_nombre5.setText(duc.getNombre());
+        fecham2.setText(duc.getSabor());
+        tf_user3.setText(duc.getCategoria());
         visase.setModal(true);
         visase.pack();
         visase.setLocationRelativeTo(this);
@@ -2109,7 +2107,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombre7;
     private javax.swing.JPasswordField tf_pass;
     private javax.swing.JPasswordField tf_pass1;
-    private javax.swing.JPasswordField tf_pass2;
+    private javax.swing.JTextField tf_pass2;
     private javax.swing.JPasswordField tf_pi;
     private javax.swing.JTextField tf_sabor;
     private javax.swing.JTextField tf_ui;
