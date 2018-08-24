@@ -14,7 +14,7 @@ import java.util.Date;
 public class empleados {
 
     private String nombre;
-    private Date fecha;
+    private String fecha;
     private String user;
     private String contra;
     private String correo;
@@ -23,7 +23,7 @@ public class empleados {
     public empleados() {
     }
 
-    public empleados(String nombre, Date fecha, String user, String contra, String correo, String puesto) {
+    public empleados(String nombre, String fecha, String user, String contra, String correo, String puesto) {
         this.nombre = nombre;
         this.fecha = fecha;
         this.user = user;
@@ -40,11 +40,11 @@ public class empleados {
         this.nombre = nombre;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

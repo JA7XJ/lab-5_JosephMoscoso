@@ -5,7 +5,11 @@
  */
 package lab5_josephmoscoso;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 /**
  *
@@ -29,21 +33,637 @@ public class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jd_admin = new javax.swing.JDialog();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jt_empleados = new javax.swing.JTree();
+        jLabel4 = new javax.swing.JLabel();
+        registrar = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jd_registrar = new javax.swing.JDialog();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        tf_nombre = new javax.swing.JTextField();
+        fechan = new com.toedter.calendar.JDateChooser();
+        tf_user = new javax.swing.JTextField();
+        tf_pass = new javax.swing.JPasswordField();
+        tf_correo = new javax.swing.JTextField();
+        cb_puesto = new javax.swing.JComboBox<>();
+        menuem = new javax.swing.JPopupMenu();
+        Modificar = new javax.swing.JMenuItem();
+        Eliminar = new javax.swing.JMenuItem();
+        Visualizar = new javax.swing.JMenuItem();
+        visualizarem = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        tf_nombre1 = new javax.swing.JTextField();
+        tf_user1 = new javax.swing.JTextField();
+        tf_pass1 = new javax.swing.JPasswordField();
+        tf_correo1 = new javax.swing.JTextField();
+        fecham = new javax.swing.JTextField();
+        puestom = new javax.swing.JTextField();
+        modificarem = new javax.swing.JDialog();
+        jLabel20 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        tf_ui = new javax.swing.JTextField();
+        tf_pi = new javax.swing.JPasswordField();
+        jb_inicio = new javax.swing.JButton();
+
+        jt_empleados.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Empleados");
+        jt_empleados.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_empleados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_empleadosMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jt_empleados);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("Administrador");
+
+        registrar.setText("Agregar empleado");
+        registrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                registrarMouseClicked(evt);
+            }
+        });
+
+        jLabel5.setText("Haga click derecho en el jtree para las demas opciones");
+
+        javax.swing.GroupLayout jd_adminLayout = new javax.swing.GroupLayout(jd_admin.getContentPane());
+        jd_admin.getContentPane().setLayout(jd_adminLayout);
+        jd_adminLayout.setHorizontalGroup(
+            jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_adminLayout.createSequentialGroup()
+                .addGroup(jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_adminLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(registrar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_adminLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jLabel5))
+                    .addGroup(jd_adminLayout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(jLabel4)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jd_adminLayout.setVerticalGroup(
+            jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_adminLayout.createSequentialGroup()
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel5)
+                .addGroup(jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_adminLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(registrar)
+                        .addContainerGap(254, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_adminLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+        );
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Agregar empleado");
+
+        jLabel7.setText("Nombre");
+
+        jLabel8.setText("Fecha de nacimiento");
+
+        jLabel9.setText("User");
+
+        jLabel10.setText("Password");
+
+        jLabel11.setText("Correo");
+
+        jLabel12.setText("puesto");
+
+        jButton1.setText("Registrar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        cb_puesto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dulceria", "Boleteria", "Aseo" }));
+
+        javax.swing.GroupLayout jd_registrarLayout = new javax.swing.GroupLayout(jd_registrar.getContentPane());
+        jd_registrar.getContentPane().setLayout(jd_registrarLayout);
+        jd_registrarLayout.setHorizontalGroup(
+            jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_registrarLayout.createSequentialGroup()
+                .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_registrarLayout.createSequentialGroup()
+                        .addGap(151, 151, 151)
+                        .addComponent(jLabel6))
+                    .addGroup(jd_registrarLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_nombre)
+                            .addComponent(fechan, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
+                            .addComponent(tf_user)
+                            .addComponent(tf_pass)
+                            .addComponent(tf_correo)
+                            .addComponent(cb_puesto, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jd_registrarLayout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(jButton1)))
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+        jd_registrarLayout.setVerticalGroup(
+            jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_registrarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jd_registrarLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(7, 7, 7)
+                        .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel8))
+                    .addComponent(fechan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(tf_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(tf_pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(tf_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jd_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(cb_puesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(29, 29, 29))
+        );
+
+        Modificar.setText("Modificar");
+        Modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarActionPerformed(evt);
+            }
+        });
+        menuem.add(Modificar);
+
+        Eliminar.setText("Eliminar");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarActionPerformed(evt);
+            }
+        });
+        menuem.add(Eliminar);
+
+        Visualizar.setText("Visualizar todos los datos");
+        Visualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VisualizarActionPerformed(evt);
+            }
+        });
+        menuem.add(Visualizar);
+
+        jLabel13.setText("Datos del empleado");
+
+        jLabel14.setText("puesto");
+
+        jLabel15.setText("Nombre");
+
+        jLabel16.setText("Fecha de nacimiento");
+
+        jLabel17.setText("User");
+
+        jLabel18.setText("Password");
+
+        jLabel19.setText("Correo");
+
+        tf_nombre1.setEditable(false);
+
+        tf_user1.setEditable(false);
+
+        tf_pass1.setEditable(false);
+
+        tf_correo1.setEditable(false);
+
+        fecham.setEditable(false);
+
+        puestom.setEditable(false);
+        puestom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                puestomActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout visualizaremLayout = new javax.swing.GroupLayout(visualizarem.getContentPane());
+        visualizarem.getContentPane().setLayout(visualizaremLayout);
+        visualizaremLayout.setHorizontalGroup(
+            visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(visualizaremLayout.createSequentialGroup()
+                .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(visualizaremLayout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jLabel13))
+                    .addGroup(visualizaremLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel14))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_nombre1)
+                            .addComponent(tf_user1)
+                            .addComponent(tf_pass1)
+                            .addComponent(tf_correo1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
+                            .addComponent(fecham)
+                            .addComponent(puestom))))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+        visualizaremLayout.setVerticalGroup(
+            visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(visualizaremLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel13)
+                .addGap(24, 24, 24)
+                .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(visualizaremLayout.createSequentialGroup()
+                        .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(tf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel16))
+                    .addComponent(fecham, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(tf_user1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(tf_pass1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(tf_correo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(visualizaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(puestom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+
+        jLabel20.setText("Seleccione boton correspondiente");
+
+        jButton2.setText("Modificar nombre");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
+        jButton3.setText("Modificar fecha");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        jButton4.setText("Modificar user");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+
+        jButton5.setText("Modificar contraseña");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jButton6.setText("Modificar correo");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
+        jButton7.setText("Modificar puesto");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout modificaremLayout = new javax.swing.GroupLayout(modificarem.getContentPane());
+        modificarem.getContentPane().setLayout(modificaremLayout);
+        modificaremLayout.setHorizontalGroup(
+            modificaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificaremLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(modificaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificaremLayout.createSequentialGroup()
+                        .addGroup(modificaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
+                            .addGroup(modificaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButton4)
+                                .addComponent(jButton3)))
+                        .addGap(121, 121, 121))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificaremLayout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addGap(113, 113, 113))))
+            .addGroup(modificaremLayout.createSequentialGroup()
+                .addGroup(modificaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(modificaremLayout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(jLabel20))
+                    .addGroup(modificaremLayout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addGroup(modificaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton7)
+                            .addComponent(jButton6))))
+                .addContainerGap(97, Short.MAX_VALUE))
+        );
+        modificaremLayout.setVerticalGroup(
+            modificaremLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificaremLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton5)
+                .addGap(18, 18, 18)
+                .addComponent(jButton6)
+                .addGap(18, 18, 18)
+                .addComponent(jButton7)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Inicio Sesion");
+
+        jLabel2.setText("Usuario");
+
+        jLabel3.setText("Contraseña");
+
+        jb_inicio.setText("Iniciar");
+        jb_inicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_inicioMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_ui)
+                            .addComponent(tf_pi, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(219, 219, 219)
+                        .addComponent(jb_inicio)))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 416, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(tf_ui, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(tf_pi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addComponent(jb_inicio)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jb_inicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_inicioMouseClicked
+        // TODO add your handling code here:
+        if (tf_ui.getText().equals(user) && tf_pi.getText().equals(contra)) {
+            if (e.isEmpty()) {
+
+            } else {
+                DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+                DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+                for (empleados t : e) {
+                    DefaultMutableTreeNode puesto;
+                    puesto = new DefaultMutableTreeNode(t.getPuesto());
+                    DefaultMutableTreeNode empleado;
+                    empleado = new DefaultMutableTreeNode(t);
+                    puesto.add(empleado);
+                    raiz.add(puesto);
+                }
+                m.reload();
+            }
+            jd_admin.setModal(true);
+            jd_admin.pack();
+            jd_admin.setLocationRelativeTo(this);
+            jd_admin.setVisible(true);
+        } else {
+            for (empleados t : e) {
+                if (tf_ui.getText().equals(t.getUser()) && tf_pi.getText().equals(t.getContra())) {
+                    if (t.getPuesto().equals("Dulceria")) {
+
+                    }
+                    if (t.getPuesto().equals("Boleteria")) {
+
+                    }
+                    if (t.getPuesto().equals("Aseo")) {
+
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_jb_inicioMouseClicked
+
+    private void registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registrarMouseClicked
+        // TODO add your handling code here:
+        jd_registrar.setModal(true);
+        jd_registrar.pack();
+        jd_registrar.setLocationRelativeTo(this);
+        jd_registrar.setVisible(true);
+    }//GEN-LAST:event_registrarMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        SimpleDateFormat fo = new SimpleDateFormat("yyyy/MM/dd");
+        empleados x = new empleados(tf_nombre.getText(), fo.format(fechan.getDate()), tf_user.getText(), tf_pass.getText(), tf_correo.getText(), (String) cb_puesto.getSelectedItem());
+        e.add(x);
+        DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+        DefaultMutableTreeNode puesto;
+        puesto = new DefaultMutableTreeNode((String) cb_puesto.getSelectedItem());
+        DefaultMutableTreeNode empleado;
+        empleado = new DefaultMutableTreeNode(x);
+        puesto.add(empleado);
+        raiz.add(puesto);
+        m.reload();
+        JOptionPane.showMessageDialog(jd_registrar, "Empleado registrado");
+        jd_registrar.setVisible(false);
+        tf_nombre.setText("");
+        tf_user.setText("");
+        tf_pass.setText("");
+        tf_correo.setText("");
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jt_empleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_empleadosMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = jt_empleados.getClosestRowForLocation(evt.getX(), evt.getY());
+            jt_empleados.setSelectionRow(row);
+            Object v1 = jt_empleados.getSelectionPath().getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado.getUserObject() instanceof empleados) {
+                emp = (empleados) nodo_seleccionado.getUserObject();
+                menuem.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        }
+    }//GEN-LAST:event_jt_empleadosMouseClicked
+
+    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
+        // TODO add your handling code here:
+        modificarem.setModal(true);
+        modificarem.pack();
+        modificarem.setLocationRelativeTo(jd_admin);
+        modificarem.setVisible(true);
+    }//GEN-LAST:event_ModificarActionPerformed
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+        // TODO add your handling code here:
+        int responde = JOptionPane.showConfirmDialog(this, "¿Seguro de eliminar?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (responde == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+            m.removeNodeFromParent(nodo_seleccionado);
+            m.reload();
+        }
+    }//GEN-LAST:event_EliminarActionPerformed
+
+    private void VisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VisualizarActionPerformed
+        // TODO add your handling code here:
+        tf_nombre1.setText(emp.getNombre());
+        tf_user1.setText(emp.getUser());
+        tf_pass1.setText(emp.getContra());
+        tf_correo1.setText(emp.getCorreo());
+        fecham.setText(emp.getFecha());
+        puestom.setText(emp.getPuesto());
+        visualizarem.setModal(true);
+        visualizarem.pack();
+        visualizarem.setLocationRelativeTo(jd_admin);
+        visualizarem.setVisible(true);
+    }//GEN-LAST:event_VisualizarActionPerformed
+
+    private void puestomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puestomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_puestomActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+        emp.setNombre(JOptionPane.showInputDialog("Ingrese nombre"));
+        m.reload();
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+        emp.setFecha(JOptionPane.showInputDialog("Ingrese fecha"));
+        m.reload();
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+        emp.setUser(JOptionPane.showInputDialog("Ingrese user"));
+        m.reload();
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+        emp.setContra(JOptionPane.showInputDialog("Ingrese contraseña"));
+        m.reload();
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+        emp.setCorreo(JOptionPane.showInputDialog("Ingrese correo"));
+        m.reload();
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
+        emp.setPuesto(JOptionPane.showInputDialog("Ingrese puesto"));
+        m.reload();
+    }//GEN-LAST:event_jButton7MouseClicked
 
     /**
      * @param args the command line arguments
@@ -81,6 +701,59 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Eliminar;
+    private javax.swing.JMenuItem Modificar;
+    private javax.swing.JMenuItem Visualizar;
+    private javax.swing.JComboBox<String> cb_puesto;
+    private javax.swing.JTextField fecham;
+    private com.toedter.calendar.JDateChooser fechan;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jb_inicio;
+    private javax.swing.JDialog jd_admin;
+    private javax.swing.JDialog jd_registrar;
+    private javax.swing.JTree jt_empleados;
+    private javax.swing.JPopupMenu menuem;
+    private javax.swing.JDialog modificarem;
+    private javax.swing.JTextField puestom;
+    private javax.swing.JButton registrar;
+    private javax.swing.JTextField tf_correo;
+    private javax.swing.JTextField tf_correo1;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_nombre1;
+    private javax.swing.JPasswordField tf_pass;
+    private javax.swing.JPasswordField tf_pass1;
+    private javax.swing.JPasswordField tf_pi;
+    private javax.swing.JTextField tf_ui;
+    private javax.swing.JTextField tf_user;
+    private javax.swing.JTextField tf_user1;
+    private javax.swing.JDialog visualizarem;
     // End of variables declaration//GEN-END:variables
     String user = "admin";
     String contra = "admin";
@@ -88,4 +761,6 @@ public class principal extends javax.swing.JFrame {
     ArrayList<dulces> d = new ArrayList();
     ArrayList<peliculas> p = new ArrayList();
     ArrayList<aseo> a = new ArrayList();
+    empleados emp;
+    DefaultMutableTreeNode nodo_seleccionado;
 }
