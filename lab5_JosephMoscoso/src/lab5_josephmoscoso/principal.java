@@ -1438,7 +1438,7 @@ public class principal extends javax.swing.JFrame {
     private void jb_inicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_inicioMouseClicked
         // TODO add your handling code here:
         if (tf_ui.getText().equals(user) && tf_pi.getText().equals(contra)) {
-            if (e.isEmpty()) {
+            /*if (e.isEmpty()) {
             } else {
                 DefaultTreeModel m = (DefaultTreeModel) jt_empleados.getModel();
                 DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -1451,7 +1451,7 @@ public class principal extends javax.swing.JFrame {
                     raiz.add(puesto);
                 }
                 m.reload();
-            }
+            }*/
             jd_admin.setModal(true);
             jd_admin.pack();
             jd_admin.setLocationRelativeTo(this);
@@ -1460,7 +1460,7 @@ public class principal extends javax.swing.JFrame {
             for (empleados t : e) {
                 if (tf_ui.getText().equals(t.getUser()) && tf_pi.getText().equals(t.getContra())) {
                     if (t.getPuesto().equals("Dulceria")) {
-                        if (d.isEmpty()) {
+                        /*if (d.isEmpty()) {
                         } else {
                             DefaultTreeModel m = (DefaultTreeModel) jt_dulces1.getModel();
                             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -1473,14 +1473,14 @@ public class principal extends javax.swing.JFrame {
                                 raiz.add(categoria);
                             }
                             m.reload();
-                        }
+                        }*/
                         jd_dulceria.setModal(true);
                         jd_dulceria.pack();
                         jd_dulceria.setLocationRelativeTo(this);
                         jd_dulceria.setVisible(true);
                     }
                     if (t.getPuesto().equals("Boleteria")) {
-                        if (p.isEmpty()) {
+                        /*if (p.isEmpty()) {
                         } else {
                             DefaultTreeModel m = (DefaultTreeModel) jt_dulces1.getModel();
                             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -1493,14 +1493,14 @@ public class principal extends javax.swing.JFrame {
                                 raiz.add(categoria);
                             }
                             m.reload();
-                        }
+                        }*/
                         jd_peliculas.setModal(true);
                         jd_peliculas.pack();
                         jd_peliculas.setLocationRelativeTo(this);
                         jd_peliculas.setVisible(true);
                     }
                     if (t.getPuesto().equals("Aseo")) {
-                        if (a.isEmpty()) {
+                        /*if (a.isEmpty()) {
                         } else {
                             DefaultTreeModel m = (DefaultTreeModel) jt_dulces1.getModel();
                             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -1513,7 +1513,7 @@ public class principal extends javax.swing.JFrame {
                                 raiz.add(funcion);
                             }
                             m.reload();
-                        }
+                        }*/
                         jd_aseo.setModal(true);
                         jd_aseo.pack();
                         jd_aseo.setLocationRelativeTo(this);
@@ -1668,7 +1668,7 @@ public class principal extends javax.swing.JFrame {
         if (evt.isMetaDown()) {
             int row = jt_aseo.getClosestRowForLocation(evt.getX(), evt.getY());
             jt_aseo.setSelectionRow(row);
-            Object v1 = jt_empleados.getSelectionPath().getLastPathComponent();
+            Object v1 = jt_aseo.getSelectionPath().getLastPathComponent();
             nodo_seleccionado2 = (DefaultMutableTreeNode) v1;
             if (nodo_seleccionado2.getUserObject() instanceof aseo) {
                 ase = (aseo) nodo_seleccionado2.getUserObject();

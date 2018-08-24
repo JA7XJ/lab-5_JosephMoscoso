@@ -10,6 +10,7 @@ package lab5_josephmoscoso;
  * @author Joseph
  */
 public class peliculas {
+
     private String nombre;
     private String duracion;
     private String clasificacion;
@@ -56,5 +57,10 @@ public class peliculas {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-    
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
+
 }
