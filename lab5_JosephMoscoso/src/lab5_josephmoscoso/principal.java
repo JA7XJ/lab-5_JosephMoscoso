@@ -1776,9 +1776,9 @@ public class principal extends javax.swing.JFrame {
 
     private void dul_visualizar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dul_visualizar1ActionPerformed
         // TODO add your handling code here:
-        tf_nombre5.setText(duc.getNombre());
-        fecham2.setText(duc.getSabor());
-        tf_user3.setText(duc.getCategoria());
+        tf_nombre5.setText(ase.getNombre());
+        fecham2.setText(ase.getDescripcion());
+        tf_user3.setText(ase.getFuncion());
         visase.setModal(true);
         visase.pack();
         visase.setLocationRelativeTo(this);
