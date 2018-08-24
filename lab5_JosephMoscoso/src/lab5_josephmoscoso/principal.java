@@ -87,6 +87,11 @@ public class principal extends javax.swing.JFrame {
         jt_dulces1 = new javax.swing.JTree();
         jLabel28 = new javax.swing.JLabel();
         jd_peliculas = new javax.swing.JDialog();
+        registrar3 = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jt_peliculas = new javax.swing.JTree();
+        jLabel44 = new javax.swing.JLabel();
         jd_aseo = new javax.swing.JDialog();
         registrar1 = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
@@ -146,6 +151,37 @@ public class principal extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
+        menupelis = new javax.swing.JPopupMenu();
+        dul_visualizar2 = new javax.swing.JMenuItem();
+        dul_eliminar2 = new javax.swing.JMenuItem();
+        dul_modificar2 = new javax.swing.JMenuItem();
+        jd_registrarpelis = new javax.swing.JDialog();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        cb_aseo1 = new javax.swing.JComboBox<>();
+        jButton16 = new javax.swing.JButton();
+        jLabel48 = new javax.swing.JLabel();
+        tf_nombre6 = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        duracion = new javax.swing.JTextField();
+        clasificion = new javax.swing.JTextField();
+        jd_visualizarpelis = new javax.swing.JDialog();
+        tf_nombre7 = new javax.swing.JTextField();
+        tf_user4 = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        tf_pass2 = new javax.swing.JPasswordField();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        fecham3 = new javax.swing.JTextField();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jd_modificarpelis = new javax.swing.JDialog();
+        jButton17 = new javax.swing.JButton();
+        jLabel55 = new javax.swing.JLabel();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -568,15 +604,62 @@ public class principal extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
+        registrar3.setText("Agregar al inventario");
+        registrar3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                registrar3MouseClicked(evt);
+            }
+        });
+
+        jLabel43.setText("Haga click derecho en el jtree para las demas opciones");
+
+        jt_peliculas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Pelicula");
+        jt_peliculas.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_peliculas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_peliculasMouseClicked(evt);
+            }
+        });
+        jScrollPane5.setViewportView(jt_peliculas);
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel44.setText("Aseo");
+
         javax.swing.GroupLayout jd_peliculasLayout = new javax.swing.GroupLayout(jd_peliculas.getContentPane());
         jd_peliculas.getContentPane().setLayout(jd_peliculasLayout);
         jd_peliculasLayout.setHorizontalGroup(
             jd_peliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jd_peliculasLayout.createSequentialGroup()
+                .addGroup(jd_peliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_peliculasLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(registrar3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_peliculasLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jLabel43))
+                    .addGroup(jd_peliculasLayout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(jLabel44)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jd_peliculasLayout.setVerticalGroup(
             jd_peliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jd_peliculasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel44)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel43)
+                .addGroup(jd_peliculasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_peliculasLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(registrar3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_peliculasLayout.createSequentialGroup()
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         registrar1.setText("Agregar al inventario");
@@ -1060,6 +1143,238 @@ public class principal extends javax.swing.JFrame {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
+        dul_visualizar2.setText("Visualizar");
+        dul_visualizar2.setToolTipText("");
+        dul_visualizar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dul_visualizar2ActionPerformed(evt);
+            }
+        });
+        menupelis.add(dul_visualizar2);
+
+        dul_eliminar2.setText("eliminar");
+        dul_eliminar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dul_eliminar2ActionPerformed(evt);
+            }
+        });
+        menupelis.add(dul_eliminar2);
+
+        dul_modificar2.setText("Modificar");
+        dul_modificar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dul_modificar2ActionPerformed(evt);
+            }
+        });
+        menupelis.add(dul_modificar2);
+
+        jLabel45.setText("Nombre");
+
+        jLabel46.setText("Duracion");
+
+        jLabel47.setText("Categoria");
+
+        cb_aseo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Limpieza de pisos", "Limpeza de vidrios", "Limpieza de mesas" }));
+
+        jButton16.setText("Agregar");
+        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton16MouseClicked(evt);
+            }
+        });
+
+        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel48.setText("Agregar al inventario");
+
+        jLabel49.setText("Clasificacion");
+
+        javax.swing.GroupLayout jd_registrarpelisLayout = new javax.swing.GroupLayout(jd_registrarpelis.getContentPane());
+        jd_registrarpelis.getContentPane().setLayout(jd_registrarpelisLayout);
+        jd_registrarpelisLayout.setHorizontalGroup(
+            jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_registrarpelisLayout.createSequentialGroup()
+                .addGroup(jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_registrarpelisLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel45)
+                            .addComponent(jLabel46)
+                            .addComponent(jLabel49))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_nombre6, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addComponent(duracion)
+                            .addComponent(clasificion)))
+                    .addGroup(jd_registrarpelisLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel48))
+                    .addGroup(jd_registrarpelisLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel47)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cb_aseo1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_registrarpelisLayout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addComponent(jButton16)))
+                .addContainerGap(105, Short.MAX_VALUE))
+        );
+        jd_registrarpelisLayout.setVerticalGroup(
+            jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_registrarpelisLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel48)
+                .addGap(18, 18, 18)
+                .addGroup(jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(tf_nombre6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel46)
+                    .addComponent(duracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel49)
+                    .addComponent(clasificion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_registrarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(cb_aseo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton16)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tf_nombre7.setEditable(false);
+
+        tf_user4.setEditable(false);
+
+        jLabel50.setText("Datos del empleado");
+
+        tf_pass2.setEditable(false);
+
+        jLabel51.setText("Nombre");
+
+        jLabel52.setText("Duracion");
+
+        fecham3.setEditable(false);
+
+        jLabel53.setText("Clasificacion");
+
+        jLabel54.setText("Categoria");
+
+        javax.swing.GroupLayout jd_visualizarpelisLayout = new javax.swing.GroupLayout(jd_visualizarpelis.getContentPane());
+        jd_visualizarpelis.getContentPane().setLayout(jd_visualizarpelisLayout);
+        jd_visualizarpelisLayout.setHorizontalGroup(
+            jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_visualizarpelisLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_visualizarpelisLayout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(jLabel50))
+                    .addGroup(jd_visualizarpelisLayout.createSequentialGroup()
+                        .addGroup(jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel51)
+                            .addComponent(jLabel52)
+                            .addComponent(jLabel53)
+                            .addComponent(jLabel54))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_nombre7, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+                            .addComponent(fecham3)
+                            .addComponent(tf_user4)
+                            .addComponent(tf_pass2))))
+                .addGap(40, 40, 40))
+        );
+        jd_visualizarpelisLayout.setVerticalGroup(
+            jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_visualizarpelisLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel50)
+                .addGap(24, 24, 24)
+                .addGroup(jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jd_visualizarpelisLayout.createSequentialGroup()
+                        .addGroup(jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel51)
+                            .addComponent(tf_nombre7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel52))
+                    .addComponent(fecham3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel53)
+                    .addComponent(tf_user4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jd_visualizarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel54)
+                    .addComponent(tf_pass2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        jButton17.setText("Modificar categoria");
+        jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton17MouseClicked(evt);
+            }
+        });
+
+        jLabel55.setText("Seleccione boton correspondiente");
+
+        jButton18.setText("Modificar nombre");
+        jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton18MouseClicked(evt);
+            }
+        });
+
+        jButton19.setText("Modificar duracion");
+        jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton19MouseClicked(evt);
+            }
+        });
+
+        jButton20.setText("Modificar calificacion");
+        jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton20MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_modificarpelisLayout = new javax.swing.GroupLayout(jd_modificarpelis.getContentPane());
+        jd_modificarpelis.getContentPane().setLayout(jd_modificarpelisLayout);
+        jd_modificarpelisLayout.setHorizontalGroup(
+            jd_modificarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_modificarpelisLayout.createSequentialGroup()
+                .addGroup(jd_modificarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_modificarpelisLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(jd_modificarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton17)
+                            .addComponent(jButton20)
+                            .addComponent(jButton19, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton18, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(jd_modificarpelisLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel55)))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+        jd_modificarpelisLayout.setVerticalGroup(
+            jd_modificarpelisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_modificarpelisLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton18)
+                .addGap(18, 18, 18)
+                .addComponent(jButton19)
+                .addGap(18, 18, 18)
+                .addComponent(jButton20)
+                .addGap(18, 18, 18)
+                .addComponent(jButton17)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -1165,12 +1480,40 @@ public class principal extends javax.swing.JFrame {
                         jd_dulceria.setVisible(true);
                     }
                     if (t.getPuesto().equals("Boleteria")) {
+                        if (p.isEmpty()) {
+                        } else {
+                            DefaultTreeModel m = (DefaultTreeModel) jt_dulces1.getModel();
+                            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+                            for (peliculas dd : p) {
+                                DefaultMutableTreeNode categoria;
+                                categoria = new DefaultMutableTreeNode(dd.getCategoria());
+                                DefaultMutableTreeNode nombre;
+                                nombre = new DefaultMutableTreeNode(dd);
+                                categoria.add(nombre);
+                                raiz.add(categoria);
+                            }
+                            m.reload();
+                        }
                         jd_peliculas.setModal(true);
                         jd_peliculas.pack();
                         jd_peliculas.setLocationRelativeTo(this);
                         jd_peliculas.setVisible(true);
                     }
                     if (t.getPuesto().equals("Aseo")) {
+                        if (a.isEmpty()) {
+                        } else {
+                            DefaultTreeModel m = (DefaultTreeModel) jt_dulces1.getModel();
+                            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+                            for (aseo dd : a) {
+                                DefaultMutableTreeNode funcion;
+                                funcion = new DefaultMutableTreeNode(dd.getFuncion());
+                                DefaultMutableTreeNode nombre;
+                                nombre = new DefaultMutableTreeNode(dd);
+                                funcion.add(nombre);
+                                raiz.add(funcion);
+                            }
+                            m.reload();
+                        }
                         jd_aseo.setModal(true);
                         jd_aseo.pack();
                         jd_aseo.setLocationRelativeTo(this);
@@ -1376,9 +1719,9 @@ public class principal extends javax.swing.JFrame {
 
     private void dul_visualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dul_visualizarActionPerformed
         // TODO add your handling code here:
-        tf_nombre5.setText(ase.getNombre());
-        fecham2.setText(ase.getDescripcion());
-        tf_user3.setText(ase.getFuncion());
+        tf_nombre3.setText(duc.getNombre());
+        fecham1.setText(duc.getSabor());
+        tf_user2.setText(duc.getCategoria());
         jd_visualizardul.setModal(true);
         jd_visualizardul.pack();
         jd_visualizardul.setLocationRelativeTo(this);
@@ -1419,14 +1762,14 @@ public class principal extends javax.swing.JFrame {
 
     private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
         // TODO add your handling code here:
-        aseo ase = new aseo(tf_nombre4.getText(), ta_descripcion.getText(), (String) cb_aseo.getSelectedItem());
-        a.add(ase);
+        aseo ases = new aseo(tf_nombre4.getText(), ta_descripcion.getText(), (String) cb_aseo.getSelectedItem());
+        a.add(ases);
         DefaultTreeModel m = (DefaultTreeModel) jt_aseo.getModel();
         DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
         DefaultMutableTreeNode funcion;
-        funcion = new DefaultMutableTreeNode(ase.getFuncion());
+        funcion = new DefaultMutableTreeNode(ases.getFuncion());
         DefaultMutableTreeNode producto;
-        producto = new DefaultMutableTreeNode(ase);
+        producto = new DefaultMutableTreeNode(ases);
         funcion.add(producto);
         raiz.add(funcion);
         m.reload();
@@ -1486,6 +1829,106 @@ public class principal extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(jd_md, "Modificado con exito");
     }//GEN-LAST:event_jButton15MouseClicked
 
+    private void registrar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registrar3MouseClicked
+        // TODO add your handling code here:
+        jd_registrarpelis.setModal(true);
+        jd_registrarpelis.pack();
+        jd_registrarpelis.setLocationRelativeTo(this);
+        jd_registrarpelis.setVisible(true);
+    }//GEN-LAST:event_registrar3MouseClicked
+
+    private void jt_peliculasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_peliculasMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = jt_peliculas.getClosestRowForLocation(evt.getX(), evt.getY());
+            jt_peliculas.setSelectionRow(row);
+            Object v1 = jt_peliculas.getSelectionPath().getLastPathComponent();
+            nodo_seleccionado3 = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado3.getUserObject() instanceof peliculas) {
+                pelis = (peliculas) nodo_seleccionado3.getUserObject();
+                menupelis.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        }
+    }//GEN-LAST:event_jt_peliculasMouseClicked
+
+    private void dul_visualizar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dul_visualizar2ActionPerformed
+        // TODO add your handling code here:
+        tf_nombre7.setText(pelis.getNombre());
+        fecham3.setText(pelis.getDuracion());
+        tf_user4.setText(pelis.getClasificacion());
+        tf_pass2.setText(pelis.getCategoria());
+        jd_visualizarpelis.setModal(true);
+        jd_visualizarpelis.pack();
+        jd_visualizarpelis.setLocationRelativeTo(this);
+        jd_visualizarpelis.setVisible(true);;
+    }//GEN-LAST:event_dul_visualizar2ActionPerformed
+
+    private void dul_eliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dul_eliminar2ActionPerformed
+        // TODO add your handling code here:
+        int responde = JOptionPane.showConfirmDialog(this, "¿Seguro de eliminar?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (responde == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m = (DefaultTreeModel) jt_peliculas.getModel();
+            m.removeNodeFromParent(nodo_seleccionado3);
+            m.reload();
+        }
+    }//GEN-LAST:event_dul_eliminar2ActionPerformed
+
+    private void dul_modificar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dul_modificar2ActionPerformed
+        // TODO add your handling code here:
+        jd_modificarpelis.setModal(true);
+        jd_modificarpelis.pack();
+        jd_modificarpelis.setLocationRelativeTo(this);
+        jd_modificarpelis.setVisible(true);;
+    }//GEN-LAST:event_dul_modificar2ActionPerformed
+
+    private void jButton16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseClicked
+        // TODO add your handling code here:
+        peliculas ases = new peliculas(tf_nombre6.getText(), duracion.getText(), clasificion.getText(), (String) cb_aseo1.getSelectedItem());
+        p.add(ases);
+        DefaultTreeModel m = (DefaultTreeModel) jt_peliculas.getModel();
+        DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+        DefaultMutableTreeNode funcion;
+        funcion = new DefaultMutableTreeNode(ases.getCategoria());
+        DefaultMutableTreeNode producto;
+        producto = new DefaultMutableTreeNode(ases);
+        funcion.add(producto);
+        raiz.add(funcion);
+        m.reload();
+        JOptionPane.showMessageDialog(regaseo, "Pelicula agregada");
+    }//GEN-LAST:event_jButton16MouseClicked
+
+    private void jButton17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_peliculas.getModel();
+        pelis.setCategoria(JOptionPane.showInputDialog("Ingrese categoria"));
+        m.reload();
+        JOptionPane.showMessageDialog(jd_peliculas, "Modificado con exito");
+    }//GEN-LAST:event_jButton17MouseClicked
+
+    private void jButton18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_peliculas.getModel();
+        pelis.setNombre(JOptionPane.showInputDialog("Ingrese nombre"));
+        m.reload();
+        JOptionPane.showMessageDialog(jd_peliculas, "Modificado con exito");
+    }//GEN-LAST:event_jButton18MouseClicked
+
+    private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_peliculas.getModel();
+        pelis.setDuracion(JOptionPane.showInputDialog("Ingrese duracion"));
+        m.reload();
+        JOptionPane.showMessageDialog(jd_peliculas, "Modificado con exito");
+    }//GEN-LAST:event_jButton19MouseClicked
+
+    private void jButton20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseClicked
+        // TODO add your handling code here:
+        DefaultTreeModel m = (DefaultTreeModel) jt_peliculas.getModel();
+        pelis.setClasificacion(JOptionPane.showInputDialog("Ingrese calificacion"));
+        m.reload();
+        JOptionPane.showMessageDialog(jd_peliculas, "Modificado con exito");
+    }//GEN-LAST:event_jButton20MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1526,18 +1969,25 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem Modificar;
     private javax.swing.JMenuItem Visualizar;
     private javax.swing.JComboBox<String> cb_aseo;
+    private javax.swing.JComboBox<String> cb_aseo1;
     private javax.swing.JComboBox<String> cb_categdul;
     private javax.swing.JComboBox<String> cb_puesto;
+    private javax.swing.JTextField clasificion;
     private javax.swing.JMenuItem dul_eliminar;
     private javax.swing.JMenuItem dul_eliminar1;
+    private javax.swing.JMenuItem dul_eliminar2;
     private javax.swing.JMenuItem dul_modificar;
     private javax.swing.JMenuItem dul_modificar1;
+    private javax.swing.JMenuItem dul_modificar2;
     private javax.swing.JMenuItem dul_visualizar;
     private javax.swing.JMenuItem dul_visualizar1;
+    private javax.swing.JMenuItem dul_visualizar2;
     private javax.swing.JDialog dulcesreg;
+    private javax.swing.JTextField duracion;
     private javax.swing.JTextField fecham;
     private javax.swing.JTextField fecham1;
     private javax.swing.JTextField fecham2;
+    private javax.swing.JTextField fecham3;
     private com.toedter.calendar.JDateChooser fechan;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -1546,7 +1996,12 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1591,7 +2046,20 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1600,27 +2068,34 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JButton jb_inicio;
     private javax.swing.JDialog jd_admin;
     private javax.swing.JDialog jd_aseo;
     private javax.swing.JDialog jd_dulceria;
     private javax.swing.JDialog jd_md;
     private javax.swing.JDialog jd_modificardul;
+    private javax.swing.JDialog jd_modificarpelis;
     private javax.swing.JDialog jd_peliculas;
     private javax.swing.JDialog jd_registrar;
+    private javax.swing.JDialog jd_registrarpelis;
     private javax.swing.JDialog jd_visualizardul;
+    private javax.swing.JDialog jd_visualizarpelis;
     private javax.swing.JTree jt_aseo;
     private javax.swing.JTree jt_dulces1;
     private javax.swing.JTree jt_empleados;
+    private javax.swing.JTree jt_peliculas;
     private javax.swing.JPopupMenu menuaseo;
     private javax.swing.JPopupMenu menudul;
     private javax.swing.JPopupMenu menuem;
+    private javax.swing.JPopupMenu menupelis;
     private javax.swing.JDialog modificarem;
     private javax.swing.JTextField puestom;
     private javax.swing.JDialog regaseo;
     private javax.swing.JButton registrar;
     private javax.swing.JButton registrar1;
     private javax.swing.JButton registrar2;
+    private javax.swing.JButton registrar3;
     private javax.swing.JTextArea ta_descripcion;
     private javax.swing.JTextField tf_correo;
     private javax.swing.JTextField tf_correo1;
@@ -1630,8 +2105,11 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombre3;
     private javax.swing.JTextField tf_nombre4;
     private javax.swing.JTextField tf_nombre5;
+    private javax.swing.JTextField tf_nombre6;
+    private javax.swing.JTextField tf_nombre7;
     private javax.swing.JPasswordField tf_pass;
     private javax.swing.JPasswordField tf_pass1;
+    private javax.swing.JPasswordField tf_pass2;
     private javax.swing.JPasswordField tf_pi;
     private javax.swing.JTextField tf_sabor;
     private javax.swing.JTextField tf_ui;
@@ -1639,6 +2117,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_user1;
     private javax.swing.JTextField tf_user2;
     private javax.swing.JTextField tf_user3;
+    private javax.swing.JTextField tf_user4;
     private javax.swing.JDialog visase;
     private javax.swing.JDialog visualizarem;
     // End of variables declaration//GEN-END:variables
